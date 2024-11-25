@@ -1,0 +1,12 @@
+[submodule "ECEN404SVM"]
+	path = ECEN404SVM
+	url = git@github.com:Chasebarn35/ECEN404SVM.git
+[submodule "ECEN403SVM"]
+	path = ECEN403SVM
+	url = git@github.com:Chasebarn35/ECEN403SVM.git
+[submodule "ECEN403FSM"]
+	path = ECEN403FSM
+	url = git@github.com:Chasebarn35/ECEN403FSM.git
+[submodule "ECEN403TUI"]
+	path = ECEN403TUI
+	url = git@github.com:Chasebarn35/ECEN403TUI.git
