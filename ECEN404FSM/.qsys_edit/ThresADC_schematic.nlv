@@ -1,0 +1,22 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst ThresADC.modular_adc_0.sample_store_internal -pg 1
+preplace inst ThresADC.modular_adc_0.control_internal -pg 1
+preplace inst ThresADC.altpll_0 -pg 1 -lvl 2 -y 30
+preplace inst ThresADC -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst ThresADC.modular_adc_0.sequencer_internal -pg 1
+preplace inst ThresADC.modular_adc_0.cb_inst -pg 1
+preplace inst ThresADC.modular_adc_0.rst_inst -pg 1
+preplace inst ThresADC.modular_adc_0 -pg 1 -lvl 3 -y 110
+preplace inst ThresADC.clk_0 -pg 1 -lvl 1 -y 30
+preplace inst ThresADC.modular_adc_0.st_splitter_internal -pg 1
+preplace inst ThresADC.modular_adc_0.threshold_detect_internal -pg 1
+preplace netloc EXPORT<net_container>ThresADC</net_container>(SLAVE)ThresADC.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>ThresADC</net_container>(SLAVE)altpll_0.inclk_interface,(MASTER)clk_0.clk,(SLAVE)modular_adc_0.clock) 1 1 2 280 160 NJ
+preplace netloc POINT_TO_POINT<net_container>ThresADC</net_container>(SLAVE)altpll_0.locked_conduit,(SLAVE)modular_adc_0.adc_pll_locked) 1 1 2 300 140 NJ
+preplace netloc FAN_OUT<net_container>ThresADC</net_container>(MASTER)clk_0.clk_reset,(SLAVE)modular_adc_0.reset_sink,(SLAVE)altpll_0.inclk_interface_reset) 1 1 2 260 180 NJ
+preplace netloc POINT_TO_POINT<net_container>ThresADC</net_container>(SLAVE)modular_adc_0.adc_pll_clock,(MASTER)altpll_0.c0) 1 2 1 520
+preplace netloc EXPORT<net_container>ThresADC</net_container>(SLAVE)ThresADC.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>ThresADC</net_container>(MASTER)ThresADC.modular_adc_0_threshold,(MASTER)modular_adc_0.threshold) 1 3 1 N
+levelinfo -pg 1 0 50 950
+levelinfo -hier ThresADC 60 90 330 640 780

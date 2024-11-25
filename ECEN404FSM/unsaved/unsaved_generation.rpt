@@ -1,0 +1,49 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\Clown\Desktop\Folder\ECEN404FSM\unsaved.qsys --block-symbol-file --output-directory=C:\Users\Clown\Desktop\Folder\ECEN404FSM\unsaved --family="MAX 10" --part=10M04SAE144C8G
+Progress: Loading ECEN404FSM/unsaved.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 23.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 23.1]
+Progress: Parameterizing module clk_0
+Progress: Adding modular_adc_1 [altera_modular_adc 23.1]
+Progress: Parameterizing module modular_adc_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: unsaved.modular_adc_1: Interrupt sender modular_adc_1.sample_store_irq is not connected to an interrupt receiver
+Warning: unsaved.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: unsaved.modular_adc_1: modular_adc_1.sequencer_csr must be connected to an Avalon-MM master
+Warning: unsaved.: You have exported the interface modular_adc_1.sample_store_csr but not its associated clock interface.  Export the driver of modular_adc_1.clock
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Clown\Desktop\Folder\ECEN404FSM\unsaved.qsys --synthesis=VERILOG --output-directory=C:\Users\Clown\Desktop\Folder\ECEN404FSM\unsaved\synthesis --family="MAX 10" --part=10M04SAE144C8G
+Progress: Loading ECEN404FSM/unsaved.qsys
+Progress: Reading input file
+Progress: Adding altpll_0 [altpll 23.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 23.1]
+Progress: Parameterizing module clk_0
+Progress: Adding modular_adc_1 [altera_modular_adc 23.1]
+Progress: Parameterizing module modular_adc_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: unsaved.modular_adc_1: Interrupt sender modular_adc_1.sample_store_irq is not connected to an interrupt receiver
+Warning: unsaved.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: unsaved.modular_adc_1: modular_adc_1.sequencer_csr must be connected to an Avalon-MM master
+Warning: unsaved.: You have exported the interface modular_adc_1.sample_store_csr but not its associated clock interface.  Export the driver of modular_adc_1.clock
+Info: unsaved: Generating unsaved "unsaved" for QUARTUS_SYNTH
+Info: altpll_0: "unsaved" instantiated altpll "altpll_0"
+Info: modular_adc_1: "unsaved" instantiated altera_modular_adc "modular_adc_1"
+Info: rst_controller: "unsaved" instantiated altera_reset_controller "rst_controller"
+Info: control_internal: "modular_adc_1" instantiated altera_modular_adc_control "control_internal"
+Info: sequencer_internal: "modular_adc_1" instantiated altera_modular_adc_sequencer "sequencer_internal"
+Info: sample_store_internal: "modular_adc_1" instantiated altera_modular_adc_sample_store "sample_store_internal"
+Info: unsaved: Done "unsaved" with 7 modules, 18 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

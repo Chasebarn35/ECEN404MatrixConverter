@@ -1,0 +1,466 @@
+Power Analyzer report for ECEN404FSM
+Thu Nov  7 12:48:21 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Parallel Compilation
+  3. Power Analyzer Summary
+  4. Power Analyzer Settings
+  5. Operating Conditions Used
+  6. Thermal Power Dissipation by Block
+  7. Thermal Power Dissipation by Block Type
+  8. Thermal Power Dissipation by Hierarchy
+  9. Core Dynamic Thermal Power Dissipation by Clock Domain
+ 10. Current Drawn from Voltage Supplies Summary
+ 11. VCCIO Supply Current Drawn by I/O Bank
+ 12. VCCIO Supply Current Drawn by Voltage
+ 13. Confidence Metric Details
+ 14. Signal Activities
+ 15. Power Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.17        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   2.5%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Power Analyzer Summary                                                                    ;
++----------------------------------------+--------------------------------------------------+
+; Power Analyzer Status                  ; Successful - Thu Nov  7 12:48:21 2024            ;
+; Quartus Prime Version                  ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition   ;
+; Revision Name                          ; ECEN404FSM                                       ;
+; Top-level Entity Name                  ; top_commutation                                  ;
+; Family                                 ; MAX 10                                           ;
+; Device                                 ; 10M04SAE144C8G                                   ;
+; Power Models                           ; Final                                            ;
+; Total Thermal Power Dissipation        ; 199.64 mW                                        ;
+; Core Dynamic Thermal Power Dissipation ; 18.16 mW                                         ;
+; Core Static Thermal Power Dissipation  ; 121.88 mW                                        ;
+; I/O Thermal Power Dissipation          ; 59.60 mW                                         ;
+; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
++----------------------------------------+--------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Power Analyzer Settings                                                                                                  ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                           ; Setting                               ; Default Value ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Use smart compilation                                            ; Off                                   ; Off           ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                                    ; On            ;
+; Enable compact report table                                      ; Off                                   ; Off           ;
+; Default Power Input I/O Toggle Rate                              ; 12.5%                                 ; 12.5%         ;
+; Preset Cooling Solution                                          ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ;               ;
+; Board thermal model                                              ; None (CONSERVATIVE)                   ;               ;
+; VCCA voltage                                                     ; 3.0V                                  ;               ;
+; Default Power Toggle Rate                                        ; 12.5%                                 ; 12.5%         ;
+; Use vectorless estimation                                        ; On                                    ; On            ;
+; Use Input Files                                                  ; Off                                   ; Off           ;
+; Filter Glitches in VCD File Reader                               ; On                                    ; On            ;
+; Power Analyzer Report Signal Activity                            ; Off                                   ; Off           ;
+; Power Analyzer Report Power Dissipation                          ; Off                                   ; Off           ;
+; Device Power Characteristics                                     ; TYPICAL                               ; TYPICAL       ;
+; Automatically Compute Junction Temperature                       ; On                                    ; On            ;
+; Specified Junction Temperature                                   ; 25                                    ; 25            ;
+; Ambient Temperature                                              ; 25                                    ; 25            ;
+; Use Custom Cooling Solution                                      ; Off                                   ; Off           ;
+; Board Temperature                                                ; 25                                    ; 25            ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+
+
++--------------------------------------------------------------------------+
+; Operating Conditions Used                                                ;
++---------------------------------------------+----------------------------+
+; Setting                                     ; Value                      ;
++---------------------------------------------+----------------------------+
+; Device power characteristics                ; Typical                    ;
+;                                             ;                            ;
+; Voltages                                    ;                            ;
+;     VCCA                                    ; 3.00 V                     ;
+;     VCC_ONE                                 ; 3.30 V                     ;
+;     3.3-V LVCMOS I/O Standard               ; 3.3 V                      ;
+;     3.3 V Schmitt Trigger I/O Standard      ; 3.3 V                      ;
+;                                             ;                            ;
+; Auto computed junction temperature          ; 28.6 degrees Celsius       ;
+;     Ambient temperature                     ; 25.0 degrees Celsius       ;
+;     Junction-to-Case thermal resistance     ; 10.90 degrees Celsius/Watt ;
+;     Case-to-Heat Sink thermal resistance    ; 0.10 degrees Celsius/Watt  ;
+;     Heat Sink-to-Ambient thermal resistance ; 7.20 degrees Celsius/Watt  ;
+;                                             ;                            ;
+; Board model used                            ; None                       ;
++---------------------------------------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block                                                                                                           ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+; Block Name ; Block Type ; Total Thermal Power ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ;
++------------+------------+---------------------+-----------------------------+--------------------------------+-------------------------------+
+(1) The "Thermal Power Dissipation by Block" Table has been hidden. To show this table, please select the "Write power dissipation by block to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                            ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type          ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Combinational cell  ; 0.41 mW                           ; 0.35 mW                     ; --                             ; 0.06 mW                       ;    6.972                                                  ;
+; Clock control block ; 3.74 mW                           ; 0.00 mW                     ; --                             ; 3.74 mW                       ;  232.019                                                  ;
+; Register cell       ; 2.10 mW                           ; 1.49 mW                     ; --                             ; 0.62 mW                       ;   14.406                                                  ;
+; Oscillator block    ; 0.03 mW                           ; 0.00 mW                     ; --                             ; 0.03 mW                       ;  232.019                                                  ;
+; I/O                 ; 12.30 mW                          ; 10.55 mW                    ; 1.54 mW                        ; 0.22 mW                       ;   11.942                                                  ;
+; Voltage Regulator   ; 11.66 mW                          ; 11.66 mW                    ; 0.00 mW                        ; --                            ; --                                                        ;
++---------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              ;
++-------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                                                          ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; |top_commutation                                                                    ; 30.24 mW (24.36 mW)                  ; 24.04 mW (22.45 mW)             ; 1.54 mW (1.54 mW)                 ; 4.66 mW (0.37 mW)                 ; |top_commutation                                                                                                                                                                                                                                                                                                                             ;
+;     |FSM:PhaseA                                                                     ; 0.70 mW (0.70 mW)                    ; 0.53 mW (0.53 mW)               ; --                                ; 0.17 mW (0.17 mW)                 ; |top_commutation|FSM:PhaseA                                                                                                                                                                                                                                                                                                                  ;
+;     |FSM:PhaseB                                                                     ; 0.70 mW (0.70 mW)                    ; 0.53 mW (0.53 mW)               ; --                                ; 0.17 mW (0.17 mW)                 ; |top_commutation|FSM:PhaseB                                                                                                                                                                                                                                                                                                                  ;
+;     |FSM:PhaseC                                                                     ; 0.71 mW (0.71 mW)                    ; 0.53 mW (0.53 mW)               ; --                                ; 0.19 mW (0.19 mW)                 ; |top_commutation|FSM:PhaseC                                                                                                                                                                                                                                                                                                                  ;
+;     |adc_threshold_monitor:T1                                                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1                                                                                                                                                                                                                                                                                                    ;
+;         |ThresADC:u_adc_pll                                                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll                                                                                                                                                                                                                                                                                 ;
+;             |ThresADC_altpll_0:altpll_0                                             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_altpll_0:altpll_0                                                                                                                                                                                                                                                      ;
+;                 |ThresADC_altpll_0_stdsync_sv6:stdsync2                             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_altpll_0:altpll_0|ThresADC_altpll_0_stdsync_sv6:stdsync2                                                                                                                                                                                                               ;
+;             |ThresADC_modular_adc_0:modular_adc_0                                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0                                                                                                                                                                                                                                            ;
+;                 |ThresADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|ThresADC_modular_adc_0_avalon_st_adapter:avalon_st_adapter                                                                                                                                                                                 ;
+;                 |ThresADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|ThresADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_001                                                                                                                                                                         ;
+;                 |ThresADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_002 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|ThresADC_modular_adc_0_avalon_st_adapter_001:avalon_st_adapter_002                                                                                                                                                                         ;
+;                 |altera_modular_adc_control:control_internal                        ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal                                                                                                                                                                                                ;
+;                     |fiftyfivenm_adcblock_top_wrapper:adc_inst                      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|fiftyfivenm_adcblock_top_wrapper:adc_inst                                                                                                                                                      ;
+;                     |altera_modular_adc_control_fsm:u_control_fsm                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm                                                                                                                                                   ;
+;                         |altera_modular_adc_control_avrg_fifo:ts_avrg_fifo          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo                                                                                                 ;
+;                             |scfifo:scfifo_component                                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component                                                                         ;
+;                                 |scfifo_ds61:auto_generated                         ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated                                              ;
+;                                     |a_dpfifo_3o41:dpfifo                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo                         ;
+;                                         |a_fefifo_c6e:fifo_state                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_modular_adc_control_avrg_fifo:ts_avrg_fifo|scfifo:scfifo_component|scfifo_ds61:auto_generated|a_dpfifo_3o41:dpfifo|a_fefifo_c6e:fifo_state ;
+;                         |altera_std_synchronizer:u_clk_dft_synchronizer             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_clk_dft_synchronizer                                                                                                    ;
+;                         |altera_std_synchronizer:u_eoc_synchronizer                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_control:control_internal|altera_modular_adc_control_fsm:u_control_fsm|altera_std_synchronizer:u_eoc_synchronizer                                                                                                        ;
+;                 |altera_modular_adc_sample_store:sample_store_internal              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_sample_store:sample_store_internal                                                                                                                                                                                      ;
+;                     |altera_modular_adc_sample_store_ram:u_ss_ram                   ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram                                                                                                                                         ;
+;                         |altsyncram:altsyncram_component                            ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_sample_store:sample_store_internal|altera_modular_adc_sample_store_ram:u_ss_ram|altsyncram:altsyncram_component                                                                                                         ;
+;                 |altera_modular_adc_sequencer:sequencer_internal                    ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_sequencer:sequencer_internal                                                                                                                                                                                            ;
+;                 |altera_modular_adc_threshold_detect:threshold_detect_internal      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|ThresADC_modular_adc_0:modular_adc_0|altera_modular_adc_threshold_detect:threshold_detect_internal                                                                                                                                                                              ;
+;             |altera_reset_controller:rst_controller                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|adc_threshold_monitor:T1|ThresADC:u_adc_pll|altera_reset_controller:rst_controller                                                                                                                                                                                                                                          ;
+;     |hard_block:auto_generated_inst                                                 ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top_commutation|hard_block:auto_generated_inst                                                                                                                                                                                                                                                                                              ;
+;     |InternalClock:u0                                                               ; 3.77 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 3.77 mW (0.00 mW)                 ; |top_commutation|InternalClock:u0                                                                                                                                                                                                                                                                                                            ;
+;         |altera_int_osc:int_osc_0                                                   ; 3.77 mW (3.77 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 3.77 mW (3.77 mW)                 ; |top_commutation|InternalClock:u0|altera_int_osc:int_osc_0                                                                                                                                                                                                                                                                                   ;
++-------------------------------------------------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+(1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
+
+(2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
++----------------------------------------------------------------------------------------------------------+
+; Core Dynamic Thermal Power Dissipation by Clock Domain                                                   ;
++-------------------------------------------------------+-----------------------+--------------------------+
+; Clock Domain                                          ; Clock Frequency (MHz) ; Total Core Dynamic Power ;
++-------------------------------------------------------+-----------------------+--------------------------+
+; InternalClock:u0|altera_int_osc:int_osc_0|wire_clkout ; 116.01                ; 6.50                     ;
++-------------------------------------------------------+-----------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Current Drawn from Voltage Supplies Summary                                                                                        ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO          ; 18.10 mA                ; 3.13 mA                   ; 14.96 mA                 ; 18.10 mA                         ;
+; VCCA           ; 0.00 mA                 ; 0.00 mA                   ; 0.00 mA                  ; 0.00 mA                          ;
+; VCC_ONE        ; 42.49 mA                ; 5.55 mA                   ; 36.93 mA                 ; 42.49 mA                         ;
++----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++-----------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by I/O Bank                                                        ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; I/O Bank ; VCCIO Voltage ; Total Current Drawn ; Dynamic Current Drawn ; Static Current Drawn ;
++----------+---------------+---------------------+-----------------------+----------------------+
+; 1A       ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
+; 1B       ; 3.3V          ; 1.62 mA             ; 0.00 mA               ; 1.62 mA              ;
+; 2        ; 3.3V          ; 1.80 mA             ; 0.10 mA               ; 1.70 mA              ;
+; 3        ; 3.3V          ; 3.53 mA             ; 1.73 mA               ; 1.80 mA              ;
+; 4        ; 3.3V          ; 2.29 mA             ; 0.62 mA               ; 1.67 mA              ;
+; 5        ; 3.3V          ; 2.33 mA             ; 0.64 mA               ; 1.68 mA              ;
+; 6        ; 3.3V          ; 1.64 mA             ; 0.02 mA               ; 1.62 mA              ;
+; 7        ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
+; 8        ; 3.3V          ; 1.70 mA             ; 0.02 mA               ; 1.68 mA              ;
++----------+---------------+---------------------+-----------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; VCCIO Supply Current Drawn by Voltage                                                                                             ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+; 3.3V          ; 18.10 mA                ; 3.13 mA                   ; 14.96 mA                 ; 18.10 mA                         ;
++---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
+(1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
+(2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                        ;
++----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
+; Data Source                                                                            ; Total       ; Pin        ; Registered   ; Combinational ;
++----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
+; Simulation (from file)                                                                 ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;             ;            ;              ;               ;
+; Node, entity or clock assignment                                                       ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 2 (0.5%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 2 (1.0%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 2 (0.5%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 2 (1.0%)      ;
+;                                                                                        ;             ;            ;              ;               ;
+; Vectorless estimation                                                                  ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 374 (95.9%) ; 20 (58.8%) ; 152 (100.0%) ; 202 (99.0%)   ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 1 (0.3%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 1 (0.5%)      ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 374 (95.9%) ; 20 (58.8%) ; 152 (100.0%) ; 202 (99.0%)   ;
+;                                                                                        ;             ;            ;              ;               ;
+; Default assignment                                                                     ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 9 (2.3%)    ; 9 (26.5%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 14 (3.6%)   ; 14 (41.2%) ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;             ;            ;              ;               ;
+; Assumed 0                                                                              ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 5 (1.3%)    ; 5 (14.7%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
++----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Activities                                                                                                                           ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+; Signal ; Type ; Toggle Rate (millions of transitions / sec) ; Toggle Rate Data Source ; Static Probability ; Static Probability Data Source ;
++--------+------+---------------------------------------------+-------------------------+--------------------+--------------------------------+
+(1) The "Signal Activity" Table has been hidden. To show this table, please select the "Write signal activities to report file" option under "PowerPlay Power Analyzer Settings".
+
+
++-------------------------+
+; Power Analyzer Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Power Analyzer
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Thu Nov  7 12:48:20 2024
+Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off ECEN404FSM -c ECEN404FSM
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332164): Evaluating HDL-embedded SDC commands
+    Info (332165): Entity altera_std_synchronizer
+        Info (332166): set_false_path -to [get_keepers {*altera_std_synchronizer:*|din_s1}]
+Warning (332173): Ignored filter: *altera_std_synchronizer:*|din_s1 could not be matched with a keeper
+Warning (332048): Ignored set_false_path: Argument <to> is an empty collection
+Info (332104): Reading SDC File: 'c:/users/clown/desktop/folder/ecen404fsm/db/ip/internalclock/submodules/altera_int_osc.sdc'
+Info (332104): Reading SDC File: 'c:/users/clown/desktop/folder/ecen404fsm/db/ip/thresadc/submodules/altera_modular_adc_control.sdc'
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(21): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[0] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 21
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(21): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[0] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 21
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(21): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 21
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[0]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[0]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 21
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(21): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 21
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(22): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[1] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 22
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(22): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[1] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 22
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(22): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 22
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[1]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[1]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 22
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(22): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 22
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(23): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[2] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 23
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(23): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[2] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 23
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(23): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 23
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[2]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[2]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 23
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(23): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 23
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(24): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[3] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 24
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(24): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[3] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 24
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(24): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 24
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[3]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[3]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 24
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(24): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 24
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(25): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[4] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 25
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(25): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[4] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 25
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(25): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 25
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[4]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[4]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 25
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(25): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 25
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(26): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[5] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 26
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(26): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[5] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 26
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(26): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 26
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[5]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[5]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 26
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(26): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 26
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(27): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[6] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 27
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(27): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[6] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 27
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(27): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 27
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[6]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[6]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 27
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(27): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 27
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(28): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[7] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 28
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(28): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[7] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 28
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(28): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 28
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[7]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[7]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 28
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(28): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 28
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(29): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[8] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 29
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(29): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[8] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 29
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(29): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 29
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[8]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[8]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 29
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(29): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 29
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(30): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[9] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 30
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(30): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[9] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 30
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(30): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 30
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[9]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[9]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 30
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(30): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 30
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(31): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[10] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 31
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(31): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[10] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 31
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(31): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 31
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[10]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[10]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 31
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(31): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 31
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(32): *fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[11] could not be matched with a keeper File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 32
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(32): *altera_modular_adc_control_fsm:u_control_fsm|dout_flp[11] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 32
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(32): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 32
+    Info (332050): set_false_path -from [get_keepers {*fiftyfivenm_adcblock_primitive_wrapper:adcblock_instance|wire_from_adc_dout[11]}] -to [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|dout_flp[11]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 32
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(32): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 32
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(35): *altera_modular_adc_control_fsm:u_control_fsm|chsel[*] could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 35
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(35): *|adc_inst|adcblock_instance|primitive_instance|chsel[*] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 35
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(35): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 35
+    Info (332050): set_false_path -from [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|chsel[*]}] -to [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|chsel[*]}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 35
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(35): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 35
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(38): *altera_modular_adc_control_fsm:u_control_fsm|soc could not be matched with a register File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 38
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(38): *|adc_inst|adcblock_instance|primitive_instance|soc could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 38
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(38): Argument <from> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 38
+    Info (332050): set_false_path -from [get_registers {*altera_modular_adc_control_fsm:u_control_fsm|soc}] -to [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|soc}] File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 38
+Warning (332049): Ignored set_false_path at altera_modular_adc_control.sdc(38): Argument <to> is an empty collection File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 38
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(46): *|adc_inst|adcblock_instance|primitive_instance|eoc could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 46
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(46): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|eoc}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 46
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|eoc}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 46
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(47): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|eoc}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 47
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|eoc}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 47
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(50): *|adc_inst|adcblock_instance|primitive_instance|clk_dft could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 50
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(50): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|clk_dft}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 50
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|clk_dft}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 50
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(51): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|clk_dft}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 51
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|clk_dft}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 51
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(54): *|adc_inst|adcblock_instance|primitive_instance|dout[0] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 54
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(54): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[0]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 54
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[0]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 54
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(55): *|adc_inst|adcblock_instance|primitive_instance|dout[1] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 55
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(55): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[1]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 55
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[1]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 55
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(56): *|adc_inst|adcblock_instance|primitive_instance|dout[2] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 56
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(56): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[2]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 56
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[2]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 56
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(57): *|adc_inst|adcblock_instance|primitive_instance|dout[3] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 57
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(57): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[3]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 57
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[3]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 57
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(58): *|adc_inst|adcblock_instance|primitive_instance|dout[4] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 58
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(58): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[4]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 58
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[4]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 58
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(59): *|adc_inst|adcblock_instance|primitive_instance|dout[5] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 59
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(59): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[5]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 59
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[5]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 59
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(60): *|adc_inst|adcblock_instance|primitive_instance|dout[6] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 60
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(60): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[6]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 60
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[6]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 60
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(61): *|adc_inst|adcblock_instance|primitive_instance|dout[7] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 61
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(61): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[7]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 61
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[7]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 61
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(62): *|adc_inst|adcblock_instance|primitive_instance|dout[8] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 62
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(62): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[8]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 62
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[8]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 62
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(63): *|adc_inst|adcblock_instance|primitive_instance|dout[9] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 63
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(63): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[9]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 63
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[9]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 63
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(64): *|adc_inst|adcblock_instance|primitive_instance|dout[10] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 64
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(64): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[10]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 64
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[10]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 64
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(65): *|adc_inst|adcblock_instance|primitive_instance|dout[11] could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 65
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(65): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[11]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 65
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[11]}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 65
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(66): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[0]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 66
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[0]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 66
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(67): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[1]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 67
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[1]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 67
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(68): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[2]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 68
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[2]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 68
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(69): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[3]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 69
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[3]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 69
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(70): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[4]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 70
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[4]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 70
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(71): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[5]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 71
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[5]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 71
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(72): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[6]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 72
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[6]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 72
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(73): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[7]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 73
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[7]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 73
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(74): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[8]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 74
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[8]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 74
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(75): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[9]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 75
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[9]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 75
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(76): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[10]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 76
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[10]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 76
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(77): argument -from with value [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[11]}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 77
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|adc_inst|adcblock_instance|primitive_instance|dout[11]}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 77
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(80): *|u_control_fsm|chsel[*]|q could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 80
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(80): argument -from with value [get_pins -compatibility_mode {*|u_control_fsm|chsel[*]|q}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 80
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|u_control_fsm|chsel[*]|q}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 80
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(81): argument -from with value [get_pins -compatibility_mode {*|u_control_fsm|chsel[*]|q}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 81
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|u_control_fsm|chsel[*]|q}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 81
+Warning (332174): Ignored filter at altera_modular_adc_control.sdc(84): *|u_control_fsm|soc|q could not be matched with a pin File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 84
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(84): argument -from with value [get_pins -compatibility_mode {*|u_control_fsm|soc|q}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 84
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|u_control_fsm|soc|q}] -max 5 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 84
+Warning (332049): Ignored set_net_delay at altera_modular_adc_control.sdc(85): argument -from with value [get_pins -compatibility_mode {*|u_control_fsm|soc|q}] contains zero elements File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 85
+    Info (332050): set_net_delay -from [get_pins -compatibility_mode {*|u_control_fsm|soc|q}] -min 0 File: C:/Users/Clown/Desktop/Folder/ECEN404FSM/db/ip/ThresADC/submodules/altera_modular_adc_control.sdc Line: 85
+Info (332104): Reading SDC File: 'c:/users/clown/desktop/folder/ecen404fsm/db/ip/thresadc/submodules/altera_reset_controller.sdc'
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From int_osc_clk (Rise) to int_osc_clk (Rise) (setup and hold)
+Info (223000): Starting Vectorless Power Activity Estimation
+Info (223001): Completed Vectorless Power Activity Estimation
+Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (215049): Average toggle rate for this design is 11.817 millions of transitions / sec
+Info (215031): Total thermal power estimate for the design is 199.64 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 109 warnings
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Thu Nov  7 12:48:21 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

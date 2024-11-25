@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Thu Nov  7 12:48:21 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : ECEN404FSM
+Top-level Entity Name : top_commutation
+Family : MAX 10
+Device : 10M04SAE144C8G
+Power Models : Final
+Total Thermal Power Dissipation : 199.64 mW
+Core Dynamic Thermal Power Dissipation : 18.16 mW
+Core Static Thermal Power Dissipation : 121.88 mW
+I/O Thermal Power Dissipation : 59.60 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

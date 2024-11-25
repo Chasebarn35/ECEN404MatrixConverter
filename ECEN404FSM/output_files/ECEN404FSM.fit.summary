@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu Nov  7 12:48:17 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : ECEN404FSM
+Top-level Entity Name : top_commutation
+Family : MAX 10
+Device : 10M04SAE144C8G
+Timing Models : Final
+Total logic elements : 174 / 4,032 ( 4 % )
+    Total combinational functions : 168 / 4,032 ( 4 % )
+    Dedicated logic registers : 152 / 4,032 ( 4 % )
+Total registers : 152
+Total pins : 29 / 101 ( 29 % )
+Total virtual pins : 0
+Total memory bits : 0 / 193,536 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 40 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )
