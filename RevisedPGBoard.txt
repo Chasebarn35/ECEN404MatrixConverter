@@ -1,0 +1,10 @@
+Board Information Report
+Filename     : C:\Users\Daniel\OneDrive\Documents\College\TAMU\Spring '24\ECEN 403-404\PulseGenBoard\RevisedPGBoard.PcbDoc
+Date         : 9/3/2024
+Time         : 4:26:29 PM
+Time Elapsed : 00:00:00
+
+General
+    Board Size, 6085milsx4860mils
+    Components on board, 95
+count : 2

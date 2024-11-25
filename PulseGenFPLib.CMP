@@ -1,0 +1,14 @@
+Component   : EQFP144_A:1.65-D2:5.0_INT
+PCB Library : PulseGenFPLib.PcbLib
+Date        : 3/10/2024
+Time        : 12:50:58 AM
+
+
+
+Dimension : 0.955 x 0.934 in
+
+ Layer(s)              Pads(s)  Tracks(s)  Fill(s)  Arc(s)  Text(s)
+--------------------------------------------------------------------
+ Top Overlay                 0          8        0       0        1
+--------------------------------------------------------------------
+ Total                       0          8        0       0        1
